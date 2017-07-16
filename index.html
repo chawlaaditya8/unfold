@@ -9,14 +9,27 @@
     <div ng-app="myApp" ng-controller="myCtrl">
         <div ng-repeat="(key, data) in sections">
             <span class="well">{{key}}: {{data}}</span>
-            <div ng-repeat="image in data">
-	        	<img class="col-sm-3 img-responsive" ng-src="{{key}}/{{image}}.jpg">
+            <div class="row">
+                <div ng-repeat="image in range(1,data)">
+                    <img class="col-sm-3 img-responsive" ng-src="{{key}}/{{image}}.jpg">
+                </div>
             </div>
+            <br>
+            <br>
+            <br>
         </div>
     </div>
     <script>
     var app = angular.module('myApp', []);
     app.controller('myCtrl', function($scope, $http) {
+        $scope.range = function(min, max, step) {
+            step = step || 1;
+            var input = [];
+            for (var i = min; i <= max; i += step) {
+                input.push(i);
+            }
+            return input;
+        };
         $http.get("data.json")
             .then(function(response) {
                 $scope.sections = response.data.sections;
