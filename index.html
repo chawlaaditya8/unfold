@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <div ng-repeat="(key, data) in sections">
+            <span class="well">{{key}}: {{data}}</span>
+            <div ng-repeat="image in data">
+	        	<img class="col-sm-3 img-responsive" ng-src="{{key}}/{{image}}.jpg">
+            </div>
+        </div>
+    </div>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $http) {
+        $http.get("data.json")
+            .then(function(response) {
+                $scope.sections = response.data.sections;
+
+            });
+    });
+    </script>
+</body>
+
+</html>
