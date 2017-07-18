@@ -1,6 +1,6 @@
 .image 
 {
-	box-shadow: 3px 3px #cccccc;
+	box-shadow: 4px 4px #cccccc;
 	margin-left: 5px; 	
 }
 
@@ -10,6 +10,11 @@
 	display: block;
 }
 
+.image img:hover{
+	opacity: 0.8;
+}
+
+
 .device{
 	padding-bottom: 20px;
 }
@@ -18,4 +23,27 @@ body{
 	background-color: #eeeeee;
 	padding-top: 7rem;
 	width: 99%;
+}
+
+.navbar{
+	min-height:60px;
+}
+
+.device-2{
+	padding: 120px;
+}
+
+h2{
+	font-family: 'Roboto', sans-serif;
+	color: #666666;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px #666666; 
 }
