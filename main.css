@@ -1,0 +1,21 @@
+.image 
+{
+	box-shadow: 3px 3px #cccccc;
+	margin-left: 5px; 	
+}
+
+.image img{
+	width: 100%;
+	min-height:300px;
+	display: block;
+}
+
+.device{
+	padding-bottom: 20px;
+}
+
+body{
+	background-color: #eeeeee;
+	padding-top: 7rem;
+	width: 99%;
+}
