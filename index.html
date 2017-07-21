@@ -1,50 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <title>Unfold Studio</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="theme.min.css">
 <link rel="stylesheet" href="main.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
 <body>
-<!--     <header class="header-main">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">ClashHacks</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-sub pull-right">
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header> -->
-       <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -52,7 +20,6 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -80,19 +47,21 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <div ng-app="myApp" ng-controller="myCtrl" class="device-2">
-        <div ng-repeat="(key, data) in sections">
-            <h2>{{key}}</h2>
-            <div class="row">
-                <div ng-repeat="image in range(1,data)" class="col-xs-12 col-sm-12 col-md-6 col-lg-3 device">
-                    <div class="image">
-                        <img class="img-responsive" ng-src="{{key}}/{{image}}.jpg">
+    <div class="container-fluid">
+        <div ng-app="myApp" ng-controller="myCtrl" class="device-2">
+            <div ng-repeat="(key, data) in sections">
+                <h2>{{key}}</h2>
+                <div class="row">
+                    <div ng-repeat="image in range(1,data)" class="col-xs-12 col-sm-12 col-md-6 col-lg-3 device">
+                        <div class="image">
+                            <img class="img-responsive" ng-src="{{key}}/{{image}}.jpg">
+                        </div>
                     </div>
                 </div>
+                <br>
+                <br>
+                <br>
             </div>
-            <br>
-            <br>
-            <br>
         </div>
     </div>
     <script>
