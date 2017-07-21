@@ -47,3 +47,11 @@ h2{
 	letter-spacing: 2px;
 	text-shadow: 1px 1px #666666; 
 }
+
+
+@media(max-width:768px){
+	.device-2{
+		padding-top: 40px;
+	}
+
+}
